@@ -1,0 +1,564 @@
+/* =========================================
+   0. VARIABLES DE COLORES 
+   ========================================= */
+:root {
+    --color-fondo-principal: #F8FAFC; 
+    --color-titulos: #0F172A; 
+    --color-acento: #2563EB; 
+    --color-acento-hover: #1D4ED8; 
+    --color-blanco: #FFFFFF;
+    --color-texto: #334155; 
+}
+
+/* =========================================
+   1. RESETEO Y FUENTES
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Hace que el salto de los enlaces sea un deslizamiento suave */
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto);
+}
+
+h1, h2, h3, h4 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+h2 {
+    color: var(--color-titulos);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   2. NAVEGACIÓN (AHORA ES STICKY/FIJA)
+   ========================================= */
+#contenedor-menu {
+    background-color: var(--color-blanco);
+    padding: 15px 40px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* El menú se queda pegado arriba al bajar */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--color-acento);
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: var(--color-titulos);
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease; 
+}
+
+#menu a:hover {
+    color: var(--color-acento); 
+}
+
+/* =========================================
+   3. HERO BANNER (PORTADA DE IMPACTO)
+   ========================================= */
+.hero-section {
+    /* Usa tu imagen de reparación como fondo, cubierta por una capa oscura */
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.7)), url("imagen/reparacion.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Ocupa el 70% de la pantalla visible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-contenido h1 {
+    color: var(--color-blanco);
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-contenido p {
+    color: #E2E8F0;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-hero {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px; /* Botón de pastilla */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.btn-hero:hover {
+    background-color: var(--color-acento-hover);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   4. SECCIONES GENERALES
+   ========================================= */
+main {
+    padding: 60px 20px;
+}
+
+section {
+    margin-bottom: 70px; 
+}
+
+.contenedor-texto-centrado {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contenedor-texto-centrado p {
+    margin-bottom: 15px;
+    color: var(--color-texto);
+}
+
+/* =========================================
+   5. TARJETAS DE SERVICIOS
+   ========================================= */
+#contenedor-servicios {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+
+.tarjeta-servicio {
+    background-size: cover;
+    background-position: center;
+    height: 350px; 
+    width: 30%;
+    min-width: 300px; 
+    border-radius: 12px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden; 
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#sistema-operativo { background-image: linear-gradient(to top, rgba(15,23,42,0.9), rgba(15,23,42,0.1)), url("imagen/sistemaoperativo.jpg"); }
+#mantenimiento { background-image: linear-gradient(to top, rgba(15,23,42,0.9), rgba(15,23,42,0.1)), url("imagen/mantenimiento.jpg"); }
+#reparacion { background-image: linear-gradient(to top, rgba(15,23,42,0.9), rgba(15,23,42,0.1)), url("imagen/reparacion.jpg"); }
+
+.tarjeta-servicio:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.tarjeta-servicio p {
+    color: var(--color-blanco); 
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 25px 15px;
+    margin: 0;
+}
+
+/* =========================================
+   6. COTIZADOR (FONDO AZUL MARINO CONTRASTE)
+   ========================================= */
+#section-cotizacion {
+    background-color: var(--color-titulos); /* Azul oscuro de fondo */
+    padding: 80px 20px;
+    margin-bottom: 0; /* Quita el margen porque el footer va abajo */
+}
+
+#titulo-cotizacion {
+    color: var(--color-blanco);
+    font-size: 2.2rem;
+}
+
+.subtitulo-cotizador {
+    text-align: center;
+    color: #94A3B8;
+    margin-bottom: 40px;
+}
+
+#contenedor-cotizacion {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.columna-cotizacion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 45%;
+}
+
+.item-servicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-blanco); 
+    padding: 18px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.item-servicio:hover {
+    transform: translateX(5px); /* Se mueve un poco a la derecha al hacer hover */
+    border-color: var(--color-acento); 
+}
+
+#resultado-cotizacion {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#resultado-cotizacion p:first-child {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--color-titulos);
+    background-color: var(--color-blanco);
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(37,99,235,0.3); /* Brillo azulado */
+    margin-bottom: 20px;
+    border: 3px solid var(--color-acento); 
+}
+
+.texto-llamado {
+    color: #E2E8F0;
+}
+
+.texto-llamado a {
+    color: #60A5FA; /* Un azul claro para que lea sobre fondo oscuro */
+    font-weight: bold;
+}
+
+/* =========================================
+   ESTILOS PERSONALIZADOS PARA LOS CHECKBOXES
+   ========================================= */
+.servicio {
+    /* 1. Apagamos el diseño genérico del navegador */
+    -webkit-appearance: none;
+    appearance: none;
+    
+    /* 2. Definimos el nuevo tamaño y forma */
+    width: 26px;
+    height: 26px;
+    background-color: #F8FAFC;
+    border: 2px solid #CBD5E1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    /* 3. Preparamos el terreno para el visto bueno */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Evita que el checkbox se aplaste si el texto es muy largo */
+}
+
+/* Efecto al pasar el mouse sobre el cuadrito */
+.servicio:hover {
+    border-color: var(--color-acento);
+}
+
+/* 4. EL ESTADO ACTIVO (Cuando el cliente hace clic) */
+.servicio:checked {
+    background-color: var(--color-acento);
+    border-color: var(--color-acento);
+    
+    /* Inyectamos un icono de "check" en color blanco usando código SVG */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Pequeña animación de rebote al marcarse */
+    animation: pop 0.3s ease-out;
+}
+
+/* Efecto visual de enfoque para accesibilidad (cuando se navega con teclado) */
+.servicio:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+}
+
+/* Fotogramas para la animación de rebote del checkbox */
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+
+/* =========================================
+   7. FORMULARIO DE CONTACTO
+   ========================================= */
+#section-contacto {
+    padding: 80px 20px;
+    background-color: var(--color-fondo-principal);
+}
+
+#formulario-contacto {
+    max-width: 550px; 
+    margin: 0 auto; 
+    background-color: var(--color-blanco);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #CBD5E1; /* Esta es la línea que define el contorno del formulario */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra un poco más oscura para darle profundidad */
+    display: flex;
+    flex-direction: column; 
+}
+
+
+#formulario-contacto label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color-titulos);
+}
+
+#formulario-contacto input, 
+#formulario-contacto textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    margin-bottom: 6px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-family: inherit;
+    background-color: #F8FAFC;
+    transition: all 0.3s ease;
+}
+
+#formulario-contacto textarea {
+    resize: vertical;
+    min-height: 120px; 
+}
+
+#formulario-contacto input:focus, 
+#formulario-contacto textarea:focus {
+    outline: none;
+    border-color: var(--color-acento); 
+    background-color: var(--color-blanco);
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.1); /* Anillo de enfoque suave */
+}
+
+#formulario-contacto button {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    border: none;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#formulario-contacto button:hover {
+    background-color: var(--color-acento-hover);
+    transform: translateY(-2px);
+}
+
+/* Apariencia del botón mientras se está enviando el mensaje */
+#formulario-contacto button:disabled {
+    background-color: #94A3B8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =========================================
+   VALIDACIÓN, ASTERISCOS Y ERRORES DEL FORMULARIO
+   ========================================= */
+/* Contenedor que agrupa etiqueta + caja de texto + mensaje de error */
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px; /* Separa un bloque de campo del siguiente */
+}
+
+/* Asterisco rojo en los títulos de los campos obligatorios */
+.obligatorio {
+    color: #DC2626;
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+/* Texto rojo de error debajo de cada campo */
+.mensaje-error {
+    color: #DC2626;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 18px; /* Mantiene el espacio reservado para que el formulario no brinque */
+}
+
+/* Resalta el borde y fondo en rojo suave si ese campo falló la validación */
+#formulario-contacto input.input-error,
+#formulario-contacto textarea.input-error {
+    border-color: #DC2626;
+    background-color: #FEF2F2;
+}
+
+/* Oculta el campo trampa (Honeypot) de los usuarios reales */
+.campo-honeypot {
+    display: none;
+}
+
+/* Mensaje final debajo del botón Enviar */
+#estado-formulario {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.estado-exito {
+    color: #16A34A; /* Verde de confirmación */
+}
+
+.estado-error {
+    color: #DC2626; /* Rojo si falla la conexión */
+}
+
+
+
+/* =========================================
+   8. FOOTER PROFESIONAL
+   ========================================= */
+footer {
+    background-color: #0B1120; /* Color extra oscuro */
+    color: #94A3B8;
+    padding: 50px 20px 20px 20px;
+}
+
+.footer-contenido {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #1E293B;
+    padding-bottom: 30px;
+}
+
+.footer-info h3, .footer-contacto h4 {
+    color: var(--color-blanco);
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.footer-contacto p {
+    margin-bottom: 10px;
+}
+
+.footer-contacto i {
+    color: var(--color-acento);
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+}
+
+/* =========================================
+   9. WHATSAPP FLOTANTE
+   ========================================= */
+@keyframes flotante {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#logo-whatsapp-flotante {
+    position: fixed;
+    bottom: 25px; 
+    right: 25px;
+    z-index: 1000; 
+    animation: flotante 2s ease infinite;
+}
+
+#logo-whatsapp-flotante img {
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+    transition: transform 0.3s ease;
+}
+
+#logo-whatsapp-flotante img:hover {
+    transform: scale(1.1); /* Crece un poquito al pasar el mouse */
+}
+
+/* =========================================
+   10. RESPONSIVE DESIGN (MÓVILES)
+   ========================================= */
+@media (max-width: 768px) {
+    #contenedor-menu {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .hero-contenido h1 {
+        font-size: 2.5rem;
+    }
+
+    #contenedor-cotizacion, .footer-contenido {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .columna-cotizacion, .tarjeta-servicio {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .footer-info h3, .footer-contacto h4 {
+        text-align: center;
+    }
+}

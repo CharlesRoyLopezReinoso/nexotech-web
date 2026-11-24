@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO local para búsquedas en Quevedo -->
+    <title>NexoTech | Soporte Técnico y Reparación de PC en Quevedo</title>
+    <meta name="description" content="Servicio técnico de computadoras y laptops a domicilio en Quevedo, Los Ríos. Mantenimiento preventivo, instalación de Windows, cambio de pasta térmica y optimización. Cotiza online.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Vista previa al compartir el enlace en WhatsApp o Facebook -->
+    <meta property="og:title" content="NexoTech | Soporte Técnico de Computadoras en Quevedo">
+    <meta property="og:description" content="Cotiza en línea tu mantenimiento preventivo, instalación de SO o reparación de hardware en Quevedo.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_EC">
+
+    <!-- Tu Favicon -->
+    <link rel="icon" type="image/png" href="imagen/favicon.png">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Datos estructurados (Schema) para Google y resúmenes de IA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ComputerRepair",
+      "name": "NexoTech",
+      "description": "Soporte técnico, mantenimiento preventivo, instalación de sistemas operativos y reparación de computadoras a domicilio en Quevedo y alrededores.",
+      "telephone": "+593987709371",
+      "priceRange": "$10 - $20",
+      "areaServed": {
+        "@type": "City",
+        "name": "Quevedo"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Quevedo",
+        "addressRegion": "Los Ríos",
+        "addressCountry": "EC"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- NAVEGACIÓN FIJA -->
+    <nav id="contenedor-menu">
+        <div class="logo">
+            <!-- Cambié el icono a fa-network-wired para que haga juego con "Nexo" -->
+            <i class="fa-solid fa-network-wired"></i> NexoTech
+        </div>
+        <ul id="menu">
+            <li class="menu-viñetas"><a href="#inicio">Inicio</a></li>
+            <li class="menu-viñetas"><a href="#sobre-emprendimiento">Nosotros</a></li>
+            <li class="menu-viñetas"><a href="#section-servicios">Servicios</a></li>
+            <li class="menu-viñetas"><a href="#section-cotizacion">Cotizar</a></li>
+            <li class="menu-viñetas"><a href="#section-contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO BANNER (PORTADA) -->
+    <header id="inicio" class="hero-section">
+        <div class="hero-contenido">
+            <h1>Soporte Técnico de Confianza</h1>
+            <p>Reparación, mantenimiento y optimización de equipos informáticos en Quevedo.</p>
+            <a href="#section-cotizacion" class="btn-hero">Cotiza tu servicio <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN NOSOTROS -->
+        <section id="sobre-emprendimiento">   
+            <h2>Sobre Nuestro Emprendimiento</h2>
+            <div class="contenedor-texto-centrado">
+                <p>Bienvenido a <strong>NexoTech</strong>, tu destino confiable para todos tus servicios tecnológicos. Nos especializamos en la instalación, mantenimiento y reparación de sistemas informáticos.</p>
+                <p><strong>Brindamos soporte técnico a domicilio en Quevedo y sus alrededores.</strong> Nuestro compromiso es ofrecer un servicio honesto, directo y sin intermediarios, garantizando diagnósticos precisos para que tus equipos operen siempre al máximo rendimiento.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SERVICIOS -->
+        <section id="section-servicios">
+            <h2>Nuestros Servicios</h2>
+            <div id="contenedor-servicios">
+                <div id="sistema-operativo" class="tarjeta-servicio">
+                    <p>Instalación de SO</p>
+                </div>
+                <div id="mantenimiento" class="tarjeta-servicio">
+                    <p>Mantenimiento Preventivo</p>
+                </div>
+                <div id="reparacion" class="tarjeta-servicio">
+                    <p>Reparación de Hardware</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SECCIÓN COTIZADOR -->
+    <section id="section-cotizacion">
+        <h3 id="titulo-cotizacion">Cotiza tu Servicio</h3>
+        <p class="subtitulo-cotizador">Selecciona los servicios que necesitas y obtén un presupuesto instantáneo.</p>
+        
+        <div id="contenedor-cotizacion">
+            <div class="columna-cotizacion">
+                <label class="item-servicio">
+                    <span>Mantenimiento Preventivo - $20.00</span>
+                    <input type="checkbox" value="20.00" class="servicio">
+                </label>
+                <label class="item-servicio">
+                    <span>Instalación de Sistema Operativo - $20.00</span>
+                    <input type="checkbox" value="20.00" class="servicio">
+                </label>
+                <label class="item-servicio">
+                    <span>Cambio de pasta térmica - $10.00</span>
+                    <input type="checkbox" value="10.00" class="servicio">
+                </label>
+            </div>
+            <div class="columna-cotizacion">
+                <label class="item-servicio">
+                    <span>Actualización de Hardware - $15.00</span>
+                    <input type="checkbox" value="15.00" class="servicio">
+                </label>
+                <label class="item-servicio">
+                    <span>Optimización y Limpieza de Sistema - $10.00</span>
+                    <input type="checkbox" value="10.00" class="servicio">
+                </label>
+                <label class="item-servicio">
+                    <span>Respaldo y Transferencia de Datos - $15.00</span>
+                    <input type="checkbox" value="15.00" class="servicio">
+                </label>
+            </div>
+        </div>
+
+        <div id="resultado-cotizacion">
+            <p>Total: $<span id="totalcotizacion">0.00</span></p>
+            <p class="texto-llamado">Para un servicio personalizado, por favor&nbsp; <a href="#formulario-contacto">complete el formulario</a> &nbsp;o envíenos un mensaje por&nbsp; <a href="https://wa.me/593987709371?text=¡Hola!%20Vengo%20de%20la%20página%20web%20y%20quisiera%20más%20información." target="_blank">WhatsApp</a>.</p>
+        </div>
+    </section>
+
+<!-- SECCIÓN CONTACTO -->
+    <section id="section-contacto">
+        <h2>Ponte en Contacto</h2>
+        <!--
+            name="contacto-nexotech": nombre con el que aparecerá en tu panel de Netlify
+            data-netlify="true": le dice a Netlify que procese este formulario sin backend
+            netlify-honeypot="bot-field": activa la trampa antispam contra bots
+            novalidate: apaga las burbujas del navegador para usar tus mensajes rojos
+        -->
+        <form id="formulario-contacto" name="contacto-nexotech" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            
+            <!-- Obligatorio para que Netlify identifique el formulario al enviarlo con JavaScript (fetch) -->
+            <input type="hidden" name="form-name" value="contacto-nexotech">
+
+            <!-- Campo trampa invisible (Honeypot) contra bots -->
+            <input type="text" name="bot-field" class="campo-honeypot" tabindex="-1" autocomplete="off">
+
+            <div class="campo-grupo">
+                <label for="nombre">
+                    <i class="fa-solid fa-user"></i> Nombre: <span class="obligatorio">*</span>
+                </label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                <span class="mensaje-error" id="error-nombre"></span>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="email">
+                    <i class="fa-solid fa-envelope"></i> Correo electrónico: <span class="obligatorio">*</span>
+                </label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required>
+                <span class="mensaje-error" id="error-email"></span>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="mensaje">
+                    <i class="fa-solid fa-wrench"></i> Problema Técnico: <span class="obligatorio">*</span>
+                </label>
+                <textarea id="mensaje" name="mensaje" placeholder="Describe el problema de tu equipo..." required></textarea>
+                <span class="mensaje-error" id="error-mensaje"></span>
+            </div>
+
+            <button type="submit" id="btn-enviar">
+                <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+            </button>
+
+            <!-- Mensaje de confirmación o error al enviar -->
+            <p id="estado-formulario"></p>
+        </form>
+    </section>
+    <!-- FOOTER PROFESIONAL -->
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-info">
+                <h3><i class="fa-solid fa-network-wired"></i> NexoTech</h3>
+                <p>Soluciones tecnológicas honestas y sin intermediarios.</p>
+            </div>
+            <div class="footer-contacto">
+                <h4>Contacto Directo</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Quevedo, Los Ríos, Ecuador</p>
+                <p><i class="fa-solid fa-phone"></i> +593 987 709 371</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NexoTech. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÓN WHATSAPP -->
+    <div id="logo-whatsapp-flotante">
+        <a href="https://wa.me/593987709371?text=¡Hola!%20Vengo%20de%20la%20página%20web%20y%20quisiera%20más%20información." target="_blank">
+            <img src="imagen/whatsapp.png" alt="WhatsApp" width="60">
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
