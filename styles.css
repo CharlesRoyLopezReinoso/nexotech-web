@@ -517,9 +517,9 @@ footer {
 
 #logo-whatsapp-flotante {
     position: fixed;
-    bottom: 25px; 
-    right: 25px;
-    z-index: 1000; 
+    bottom: 90px; /* Antes era 25px; lo sube por encima de la insignia de Netlify */
+    right: 20px;
+    z-index: 1000;
     animation: flotante 2s ease infinite;
 }
 
@@ -537,14 +537,31 @@ footer {
    10. RESPONSIVE DESIGN (MÓVILES)
    ========================================= */
 @media (max-width: 768px) {
+    /* Elimina la franja blanca vertical y cualquier desborde horizontal */
+    html, body {
+        overflow-x: clip;
+    }
+
     #contenedor-menu {
         flex-direction: column;
-        padding: 15px;
-        gap: 15px;
+        padding: 15px 10px;
+        gap: 12px;
+    }
+
+    /* Permite que los enlaces se centren y ajusten sin cortarse */
+    #menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 14px;
+        width: 100%;
+    }
+
+    #menu a {
+        font-size: 14px;
     }
 
     .hero-contenido h1 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 
     #contenedor-cotizacion, .footer-contenido {
@@ -555,6 +572,7 @@ footer {
     
     .columna-cotizacion, .tarjeta-servicio {
         width: 100%;
+        min-width: 0; /* Evita que las tarjetas ensanchen la pantalla en teléfonos pequeños */
         max-width: 400px;
     }
 
